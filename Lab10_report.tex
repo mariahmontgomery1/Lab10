@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-Type the summary of your experiment and results here.  
+We expanded on lab nine in this lab and made a small calculator using the switches, buttons, LEDs, and seven-segment display on a Basys board. We first created a counter that counts to four so quickly that it lights each digit on the seven segment display without flickering. Next, we created a two's complement source that converted a number to two's complement so that our final calculator could perform simple mathematical calculations. Lastly, we combined modules from our past labs and the two we created for lab 10 to complete our calculator.  
 
 
 \section*{Q\&A}
@@ -87,10 +87,24 @@ Type the summary of your experiment and results here.
 	\includegraphics[width=0.8\textwidth, trim= 28.5cm 16cm 68cm 5.5cm, clip]{counter_test.PNG}
 	\label{fig:Counter Test Simulation}
 	
-	\item Show 2's Compliment Test Simulation 
+	\pagebreak
+	
+	\item Show 2's Complement Test Simulation 
 	
 	\includegraphics[width=0.8\textwidth, trim= 28.5cm 16cm 68cm 5.5cm, clip]{show_2c_test.PNG}
-	\label{fig:Show 2's Compliment Test Simulation}
+	\label{fig:Show 2's Complement Test Simulation}
+	
+	\item Full Strength Four Digits 
+	\includegraphics[width=0.8\textwidth, angle = 270]{allZeros.jpg}
+	\label{fig:All Zeros}
+	
+	\item Negative Number Display 
+	\includegraphics[width=0.8\textwidth, angle = 270]{negativeOne.jpg}
+	\label{fig:Negative Number Display}
+	
+	\item Positive Number Display 
+	\includegraphics[width=0.8\textwidth, angle = 270]{positveNum.jpg}
+	\label{fig:Positive Number Display}
 \end{enumerate}
 
 
@@ -177,7 +191,7 @@ module wrapper(
 endmodule
 \end{lstlisting}
 
-\begin{lstlisting}[style=Verilog,caption=Show 2's Compliment ,label=show_2c.sv]
+\begin{lstlisting}[style=Verilog,caption=Show 2's Complement ,label=show_2c.sv]
 module show_2c(
 	input [7:0] Din,
 	output [15:0] Dout,
@@ -202,7 +216,7 @@ module show_2c(
 endmodule
 \end{lstlisting}
 
-\begin{lstlisting}[style=Verilog,caption=Show 2's Compliment Test,label=show_2c_test.sv]
+\begin{lstlisting}[style=Verilog,caption=Show 2's Complement Test,label=show_2c_test.sv]
 module show_2c_test();
 
 	reg [7:0] Din_t;
